@@ -1,0 +1,196 @@
+\MinGW\bin\make.exe all -f /Users/Rody/Desktop/project1/pj-1-code-v1/makefile -C /Users/Rody/Desktop/project1/pj-1-code-v1/ --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.82.90
+# Built for i686-pc-mingw32
+# Copyright (C) 1988-2012 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Dec 22 17:10:35 2021
+
+# Variables
+
+# default
+.SHELLFLAGS := -c
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+HOMEDRIVE = C:
+# environment
+WINDIR = C:\Windows
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-tw","availableLanguages":{"*":"zh-tw"},"_languagePackId":"87cb300fe93fb847f1b715757ef901ec.zh-tw","_translationsConfigFile":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw\\tcf.json","_cacheRoot":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw","_resolvedLanguagePackCoreLocation":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw\\899d46d82c4c95423fb7e10e68eba52050e30ba3","_corruptedFile":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw\\corrupted.info","_languagePackSupport":true}
+# environment
+ONEDRIVE = C:\Users\Rody\OneDrive
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+TMP = C:\Users\Rody\AppData\Local\Temp
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-1eddbc1d-040d-4b98-bf12-d60419a31799-sock
+# environment
+VSCODE_CWD = C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code
+# environment
+PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\MinGW\bin;;C:\Program Files\Git LFS;C:\Users\Rody\AppData\Local\Microsoft\WindowsApps;;C:\Users\Rody\.dotnet\tools;C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code\bin
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+GIT_LFS_PATH = C:\Program Files\Git LFS
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+USERPROFILE = C:\Users\Rody
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+VSCODE_LOG_STACK = false
+# environment
+NUMBER_OF_PROCESSORS = 12
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17268_ONWDFVBALVHUZPRB
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+COMPUTERNAME = MSI
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+ASL.LOG = Destination=file
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERNAME = Rody
+# environment
+PUBLIC = C:\Users\Public
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\Rody\AppData\Roaming\Code\CachedData\899d46d82c4c95423fb7e10e68eba52050e30ba3
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# environment
+LOGONSERVER = \\MSI
+# environment
+ONEDRIVECONSUMER = C:\Users\Rody\OneDrive
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = MSI
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# environment
+LOCALAPPDATA = C:\Users\Rody\AppData\Local
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := c:/MinGW/bin/make
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# default
+.VARIABLES := 
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+# environment
+OS = Windows_NT
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\a7575655995ea07cda370d829f43f1d7-1.63.2-main-sock
+# environment
+HOMEPATH = \Users\Rody
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+SYSTEMROOT = C:\Windows
+# environment
+APPDATA = C:\Users\Rody\AppData\Roaming
+# environment
+TEMP = C:\Users\Rody\AppData\Local\Temp
+# environment
+COMSPEC = C:\Windows\system32\cmd.exe
+# environment
+LC_ALL = C
+# environment
+CONFIGSETROOT = C:\Windows\ConfigSetRoot
+# environment
+SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
+# environment
+PROCESSOR_REVISION = a502
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+VSCODE_PID = 17268
+# environment
+USERDOMAIN_ROAMINGPROFILE = MSI
+# variable set hash-table stats:
+# Load=70/1024=7%, Rehash=0, Collisions=2/72=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+
+# No files, no impossibilities in 0 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=1/1024=0%, Rehash=0, Collisions=0/1=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 3 / storage = 98 B / avg = 32 B
+# current buf: size = 8174 B / used = 98 B / count = 3 / avg = 32 B
+
+# strcache performance: lookups = 4 / hit rate = 25%
+# hash-table stats:
+# Load=3/8192=0%, Rehash=0, Collisions=0/4=0%
+# Finished Make data base on Wed Dec 22 17:10:35 2021
+
+ 
+make: *** /Users/Rody/Desktop/project1/pj-1-code-v1: No such file or directory.  Stop.
+ 
