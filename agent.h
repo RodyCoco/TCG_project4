@@ -17,17 +17,171 @@
 #include "board.h"
 #include "action.h"
 #include <fstream>
-#include <vector>
-#include <set>
-using namespace std;
 
-struct node{
-	float value = 0;
-	int explore_num = 0;
-	int place;
-	node* parent = NULL;
-	board board;
-	vector<node*> child;
+class node : board {
+	public:
+		node(const board& state, node* parent = nullptr) : board(state),
+			win(0), visit(0), child(), parent(parent) {}
+
+		/**
+		 * run MCTS for N cycles and retrieve the best action
+		 */
+		action run_mcts(size_t N, std::default_random_engine& engine) {
+			for(size_t i = 0; i < N; i++){
+				std::vector<node*> path = select();
+				node* leaf = path.back()->expand(engine);
+				if (leaf != path.back())
+					path.push_back(leaf);
+				update(path, leaf->simulate(engine));
+			}
+			return take_action();
+		}
+
+	protected:
+
+		/**
+		 * select from the current node to a leaf node by UCB and return all of them
+		 * a leaf node can be either a node that is not fully expanded or a terminal node
+		 */
+		std::vector<node*> select() {
+			int count=0;
+			std::vector<node*> path = { this };
+			node* cur_node = this;
+			node* max_node = nullptr;
+			float max_score = 0;
+			while(cur_node->is_selectable()){
+				max_score = -1;
+				for(size_t i=0; i<cur_node->child.size();i++){
+					if(cur_node->child[i].ucb_score() > max_score){
+						if (cur_node->child[i].ucb_score()<0) count++;
+						max_score = cur_node->child[i].ucb_score();
+						max_node = &cur_node->child[i];
+					}
+				}
+				cur_node = max_node;
+				path.push_back(cur_node);
+			}
+			return path;
+		}
+		/**
+		 * expand the current node and return the newly expanded child node
+		 * if the current node has no unexpanded move, it returns itself
+		 */
+
+		node* expand(std::default_random_engine& engine) {
+			board cur_board = *this;
+			std::vector<int> moves = all_moves(engine);
+			for (int move : moves) {
+				size_t i = 0;
+				for(i=0; i<child.size();i++){
+					if (child[i].info().last_move.i == move){
+						break;
+					}
+				}
+				if (i == child.size() && cur_board.place(move) == board::legal){
+					// this->child.push_back(cur_board);
+					this->child.emplace_back(cur_board, this);
+					return &child.back();
+				}		
+			}
+			return this;
+		}
+
+		/**
+		 * simulate the current node and return the winner
+		 */
+		unsigned simulate(std::default_random_engine& engine) {
+			board cur_board = *this;
+			bool is_game_end = false;
+			std::vector<int> moves = all_moves(engine);
+
+			while(!is_game_end){
+				bool is_find_legal = false;
+				for (int move : moves)
+					if (cur_board.place(move) == board::legal){
+						is_find_legal = true;
+						break;
+					}
+				if (!is_find_legal)
+					is_game_end = true;
+			}
+
+			return  (cur_board.info().who_take_turns == board::white)? board::black:board::white;
+		}
+
+		/**
+		 * update statistics for all nodes saved in the path
+		 */
+		void update(std::vector<node*>& path, unsigned winner) {
+			for (node* path_node : path) {
+				path_node->visit++;
+				if (winner == info().who_take_turns)
+					path_node->win++;
+			}
+		}
+
+		/**
+		 * pick the best action by visit counts
+		 */
+		action take_action() const {
+			int max_visit = -1;
+			const node* best_node = NULL;
+			for(size_t i=0; i<child.size();i++){
+				if(int(child[i].visit) > max_visit){
+					max_visit = int(child[i].visit);
+					best_node = &child[i];
+				}
+			}
+			if (best_node != NULL)
+				return action::place(best_node->info().last_move, info().who_take_turns);
+			else
+				return action();
+		}
+
+	private:
+
+		/**
+		 * check whether this node is a fully-expanded non-terminal node
+		 */
+		bool is_selectable() const {
+			size_t legal_moves = 0;
+			for (int move=0; move<81; move++){
+				board cur_board = board(*this);
+				if (cur_board.place(move) == board::legal)
+					legal_moves++;
+			}			
+			if (legal_moves == 0) // leaf_node
+				return false;
+			else if (legal_moves == child.size()) // fully-expanded
+				return true;
+			else // non-fully-expanded
+				return false; 
+
+		}
+
+		/**
+		 * get the ucb score of this node
+		 */
+		float ucb_score(float c = std::sqrt(2)) const {
+			float exploit = float(win)/visit;
+			float explore = sqrt(log(parent->visit)/visit);
+			return exploit + c*explore;
+		}
+
+		/**
+		 * get all moves in shuffled order
+		 */
+		std::vector<int> all_moves(std::default_random_engine& engine) const {
+			std::vector<int> moves;
+			for(int i=0; i<81;i++) moves.push_back(i);
+			std::shuffle(moves.begin(), moves.end(), engine);
+			return moves;
+		}
+
+	private:
+		size_t win, visit;
+		std::vector<node> child;
+		node* parent;
 };
 
 class agent {
@@ -97,42 +251,38 @@ public:
 	}
 
 	virtual action take_action(const board& state) {
-		node root;
-		node* cur_node;
-		root.board = state;
-		root.place = -1;
+		size_t N =100;
+		N = meta["N"];
+		return node(state).run_mcts(N, engine);
+	}
 
-		for(int i=1; i<=500; i++){
-			cur_node = &root;
-			bool find_explode_node = false;
-			while(!find_explode_node){
-				int legal_num = 0;
-				for (const action::place& move : space) {
-					board after = cur_node->board;
-					if (move.apply(after) == board::legal)
-						legal_num+=1;
-				}
-				if (cur_node->child.size() < legal_num)
-					find_explode_node = true;
-				else{
-					float max_score = 0;
-					for(int j=1; j<=cur_node->child.size(); j++){
-						node* cur_child = (cur_node->child)[j-1];
-						float score = cur_child->value + sqrt(2*log(i)/cur_child->explore_num);
-						if (score > max_score){
-							max_score = score;
-							cur_node = cur_child;
-						}
-					}
-				}
-			}		
+private:
+	std::vector<action::place> space;
+	board::piece_type who;
+};
+
+
+class noob_player : public random_agent {
+public:
+	noob_player(const std::string& args = "") : random_agent("name=random role=unknown " + args),
+		space(board::size_x * board::size_y), who(board::empty) {
+		if (name().find_first_of("[]():; ") != std::string::npos)
+			throw std::invalid_argument("invalid name: " + name());
+		if (role() == "black") who = board::black;
+		if (role() == "white") who = board::white;
+		if (who == board::empty)
+			throw std::invalid_argument("invalid role: " + role());
+		for (size_t i = 0; i < space.size(); i++)
+			space[i] = action::place(i, who);
+	}
+
+	virtual action take_action(const board& state) {
+		std::shuffle(space.begin(), space.end(), engine);
+		for (const action::place& move : space) {
+			board after = state;
+			if (move.apply(after) == board::legal)
+				return move;
 		}
-		// std::shuffle(space.begin(), space.end(), engine);
-		// for (const action::place& move : space) {
-		// 	board after = state;
-		// 	if (move.apply(after) == board::legal)
-		// 		return move;
-		// }
 		return action();
 	}
 

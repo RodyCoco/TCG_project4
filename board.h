@@ -46,19 +46,6 @@ class board {
 public:
 	enum size { size_x = 9u, size_y = 9u, hollow_x = 3u, hollow_y = 3u };
 	enum piece_type { empty = 0u, black = 1u, white = 2u, hollow = 3u, unknown = -1u };
-	typedef uint32_t cell;
-	typedef std::array<cell, size_y> column;
-	typedef std::array<column, size_x> grid;
-	struct data {
-		piece_type who_take_turns;
-	};
-	typedef int reward;
-
-public:
-	board() : stone(initial()), attr({piece_type::black}) {}
-	board(const grid& b, const data& d) : stone(b), attr(d) {}
-	board(const board& b) = default;
-	board& operator =(const board& b) = default;
 
 	struct point {
 		int x, y, i;
@@ -75,6 +62,21 @@ public:
 			return std::string(1, x + (x < 8 ? 'A' : 'B')) + std::to_string(y + 1);
 		}
 	};
+
+	typedef uint32_t cell;
+	typedef std::array<cell, size_y> column;
+	typedef std::array<column, size_x> grid;
+	struct data {
+		piece_type who_take_turns;
+		point last_move;
+	};
+	typedef int reward;
+
+public:
+	board() : stone(initial()), attr({piece_type::black, -1}) {}
+	board(const grid& b, const data& d) : stone(b), attr(d) {}
+	board(const board& b) = default;
+	board& operator =(const board& b) = default;
 
 	operator grid&() { return stone; }
 	operator const grid&() const { return stone; }
@@ -130,6 +132,7 @@ public:
 		if (y < p_max.y && test.check_liberty(x, y + 1, opp) == 0) return nogo_move_result::illegal_take;
 		stone[x][y] = who; // is legal move!
 		attr.who_take_turns = static_cast<piece_type>(opp);
+		attr.last_move = point(x, y);
 		return nogo_move_result::legal;
 	}
 	reward place(const point& p, unsigned who = piece_type::unknown) {

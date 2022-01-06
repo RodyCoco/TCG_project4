@@ -5,8 +5,9 @@
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Wed Dec 22 17:10:35 2021
+# Make data base, printed on Thu Jan 06 17:11:42 2022
 
 # Variables
 
@@ -25,8 +26,6 @@ ONEDRIVE = C:\Users\Rody\OneDrive
 # environment
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # environment
-FPS_BROWSER_USER_PROFILE_STRING = Default
-# environment
 TMP = C:\Users\Rody\AppData\Local\Temp
 # environment
 VSCODE_VERBOSE_LOGGING = true
@@ -35,7 +34,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-1eddbc1d-040d-4b98-bf12-d60419a31799-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-8c23b384-7982-4265-bff7-9fc8b944832f-sock
 # environment
 VSCODE_CWD = C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -59,7 +58,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17268_ONWDFVBALVHUZPRB
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16588_XBSGUQNQLMBNUYXV
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -110,6 +109,7 @@ PROCESSOR_ARCHITEW6432 = AMD64
 .VARIABLES := 
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+ 
 # environment
 OS = Windows_NT
 # environment
@@ -145,13 +145,11 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
-# environment
-VSCODE_PID = 17268
+VSCODE_PID = 16588
 # environment
 USERDOMAIN_ROAMINGPROFILE = MSI
 # variable set hash-table stats:
-# Load=70/1024=7%, Rehash=0, Collisions=2/72=3%
+# Load=68/1024=7%, Rehash=0, Collisions=2/70=3%
 
 # Pattern-specific Variable Values
 
@@ -189,7 +187,7 @@ all:
 # strcache performance: lookups = 4 / hit rate = 25%
 # hash-table stats:
 # Load=3/8192=0%, Rehash=0, Collisions=0/4=0%
-# Finished Make data base on Wed Dec 22 17:10:35 2021
+# Finished Make data base on Thu Jan 06 17:11:42 2022
 
  
 make: *** /Users/Rody/Desktop/project1/pj-1-code-v1: No such file or directory.  Stop.
