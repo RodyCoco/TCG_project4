@@ -251,7 +251,7 @@ public:
 	}
 
 	virtual action take_action(const board& state) {
-		size_t N =100;
+		size_t N = 200;
 		N = meta["N"];
 		return node(state).run_mcts(N, engine);
 	}
