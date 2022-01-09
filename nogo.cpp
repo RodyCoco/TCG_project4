@@ -22,7 +22,7 @@ int main(int argc, const char* argv[]) {
 	std::copy(argv, argv + argc, std::ostream_iterator<const char*>(std::cout, " "));
 	std::cout << std::endl << std::endl;
 
-	size_t total = 1000, block = 0, limit = 0;
+	size_t total = 20, block = 0, limit = 0;
 	std::string black_args, white_args;
 	std::string load, save;
 	std::string name = "TCG-HollowNoGo-Demo", version = "2021"; // for GTP shell
@@ -53,7 +53,7 @@ int main(int argc, const char* argv[]) {
 			shell = true;
 		}
 	}
-
+	
 	statistic stat(total, block, limit);
 
 	if (load.size()) {
@@ -64,7 +64,7 @@ int main(int argc, const char* argv[]) {
 	}
 
 	player black("name=black " + black_args + " role=black");
-	player white("name=white " + white_args + " role=white");
+	noob_player white("name=white " + white_args + " role=white");
 
 	if (!shell) { // launch standard local games
 		while (!stat.is_finished()) {
