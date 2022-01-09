@@ -36,7 +36,7 @@ class node : board {
 				update(path, leaf->simulate(engine));
 			}
 			clock_t b=clock();
-			std::cout<<b-a<<std::endl;
+			std::cout<<double(b-a)/CLOCKS_PER_SEC<<std::endl;
 			return take_action();
 		}
 
