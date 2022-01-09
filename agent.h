@@ -17,7 +17,7 @@
 #include "board.h"
 #include "action.h"
 #include <fstream>
-
+#include <ctime>
 class node : board {
 	public:
 		node(const board& state, node* parent = nullptr) : board(state),
@@ -27,6 +27,7 @@ class node : board {
 		 * run MCTS for N cycles and retrieve the best action
 		 */
 		action run_mcts(size_t N, std::default_random_engine& engine) {
+			clock_t a=clock(); 
 			for(size_t i = 0; i < N; i++){
 				std::vector<node*> path = select();
 				node* leaf = path.back()->expand(engine);
@@ -34,6 +35,8 @@ class node : board {
 					path.push_back(leaf);
 				update(path, leaf->simulate(engine));
 			}
+			clock_t b=clock();
+			std::cout<<b-a<<std::endl;
 			return take_action();
 		}
 
