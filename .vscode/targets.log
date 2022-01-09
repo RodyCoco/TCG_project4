@@ -5,9 +5,8 @@
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Thu Jan 06 17:11:42 2022
+# Make data base, printed on Sun Jan 09 22:49:21 2022
 
 # Variables
 
@@ -34,7 +33,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-8c23b384-7982-4265-bff7-9fc8b944832f-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-99998cf8-89b2-4e95-b9de-7bb161bacdc0-sock
 # environment
 VSCODE_CWD = C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -58,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16588_XBSGUQNQLMBNUYXV
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_1396_FUHEGTXJGPLPGSVZ
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -109,7 +108,6 @@ PROCESSOR_ARCHITEW6432 = AMD64
 .VARIABLES := 
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
- 
 # environment
 OS = Windows_NT
 # environment
@@ -145,7 +143,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 16588
+VSCODE_PID = 1396
 # environment
 USERDOMAIN_ROAMINGPROFILE = MSI
 # variable set hash-table stats:
@@ -187,7 +185,7 @@ all:
 # strcache performance: lookups = 4 / hit rate = 25%
 # hash-table stats:
 # Load=3/8192=0%, Rehash=0, Collisions=0/4=0%
-# Finished Make data base on Thu Jan 06 17:11:42 2022
+# Finished Make data base on Sun Jan 09 22:49:21 2022
 
  
 make: *** /Users/Rody/Desktop/project1/pj-1-code-v1: No such file or directory.  Stop.

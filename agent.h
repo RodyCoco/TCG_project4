@@ -80,7 +80,7 @@ class node : board {
 				}
 				if (i == child.size() && cur_board.place(move) == board::legal){
 					// this->child.push_back(cur_board);
-					this->child.emplace_back(cur_board, this);
+					this->child.push_back(node(cur_board, this));
 					return &child.back();
 				}		
 			}
