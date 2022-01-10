@@ -27,7 +27,7 @@ class node : board {
 		 * run MCTS for N cycles and retrieve the best action
 		 */
 		action run_mcts(size_t N, std::default_random_engine& engine) {
-			clock_t a=clock(); 
+			
 			for(size_t i = 0; i < N; i++){
 				std::vector<node*> path = select();
 				node* leaf = path.back()->expand(engine);
@@ -35,8 +35,6 @@ class node : board {
 					path.push_back(leaf);
 				update(path, leaf->simulate(engine));
 			}
-			clock_t b=clock();
-			std::cout<<double(b-a)/CLOCKS_PER_SEC<<std::endl;
 			return take_action();
 		}
 
@@ -254,14 +252,23 @@ public:
 	}
 
 	virtual action take_action(const board& state) {
-		size_t N = 200;
+		size_t N = 7000;
 		N = meta["N"];
-		return node(state).run_mcts(N, engine);
+		count+=1;
+		std::cout<<"count:"<<count<<"\n";
+		clock_t a=clock(); 
+		action result = node(state).run_mcts(N, engine);
+		clock_t b=clock();
+		total_time += double(b-a)/CLOCKS_PER_SEC;
+		std::cout<<double(b-a)/CLOCKS_PER_SEC<<" "<<total_time<<std::endl;
+		return result;
 	}
 
 private:
 	std::vector<action::place> space;
 	board::piece_type who;
+	int count = 0;
+	double total_time = 0;
 };
 
 

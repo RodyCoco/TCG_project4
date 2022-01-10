@@ -7,7 +7,7 @@
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Sun Jan 09 23:53:47 2022
+# Make data base, printed on Mon Jan 10 21:50:34 2022
 
 # Variables
 
@@ -20,8 +20,7 @@ HOMEDRIVE = C:
 # environment
 WINDIR = C:\Windows
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-tw","availableLanguages":{"*":"zh-tw"},"_languagePackId":"87cb300fe93fb847f1b715757ef901ec.zh-tw","_translationsConfigFile":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw\\tcf.json","_cacheRoot":"C:\\Users\\Rody\\AppData\\Roa 
-ming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw","_resolvedLanguagePackCoreLocation":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw\\899d46d82c4c95423fb7e10e68eba52050e30ba3","_corruptedFile":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw\\corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-tw","availableLanguages":{"*":"zh-tw"},"_languagePackId":"87cb300fe93fb847f1b715757ef901ec.zh-tw","_translationsConfigFile":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw\\tcf.json","_cacheRoot":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw","_resolvedLanguagePackCoreLocation":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw\\899d46d82c4c95423fb7e10e68eba52050e30ba3","_corruptedFile":"C:\\Users\\Rody\\AppData\\Roaming\\Code\\clp\\87cb300fe93fb847f1b715757ef901ec.zh-tw\\corrupted.info","_languagePackSupport":true}
 # environment
 ONEDRIVE = C:\Users\Rody\OneDrive
 # environment
@@ -35,11 +34,12 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-3afdf7f4-a744-4641-a219-b38fc77d98ac-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-c4a96708-66d2-4119-a66c-e08b70cb8667-sock
 # environment
 VSCODE_CWD = C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code
 # environment
-PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\MinGW\bin;;C:\Program Files\Git LFS;C:\Users\Rody\AppData\Local\Microsoft\WindowsApps;;C:\Users\Rody\.dotnet\tools;C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code\bin
+PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\MinGW\bin;;C:\Program Files\Git LFS;C: 
+\Program Files\WireGuard\;C:\Users\Rody\AppData\Local\Microsoft\WindowsApps;;C:\Users\Rody\.dotnet\tools;C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code\bin
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
@@ -59,7 +59,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_3936_EILVTWLDDLJMFFBK
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13516_ZYMOVDMYPGGQZTPA
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -110,8 +110,7 @@ PROCESSOR_ARCHITEW6432 = AMD64
 .VARIABLES := 
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
-# 
- environment
+# environment
 OS = Windows_NT
 # environment
 VSCODE_IPC_HOOK = \\.\pipe\a7575655995ea07cda370d829f43f1d7-1.63.2-main-sock
@@ -146,7 +145,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 3936
+VSCODE_PID = 13516
 # environment
 USERDOMAIN_ROAMINGPROFILE = MSI
 # variable set hash-table stats:
@@ -188,7 +187,7 @@ all:
 # strcache performance: lookups = 4 / hit rate = 25%
 # hash-table stats:
 # Load=3/8192=0%, Rehash=0, Collisions=0/4=0%
-# Finished Make data base on Sun Jan 09 23:53:47 2022
+# Finished Make data base on Mon Jan 10 21:50:34 2022
 
  
 make: *** /Users/Rody/Desktop/project1/pj-1-code-v1: No such file or directory.  Stop.
