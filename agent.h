@@ -243,7 +243,7 @@ protected:
 
 class player : public random_agent {
 public:
-	strong_player(const std::string& args = "") : random_agent("name=random role=unknown " + args),
+	player(const std::string& args = "") : random_agent("name=random role=unknown " + args),
 		space(board::size_x * board::size_y), who(board::empty) {
 		if (name().find_first_of("[]():; ") != std::string::npos)
 			throw std::invalid_argument("invalid name: " + name());
