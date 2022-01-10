@@ -63,7 +63,7 @@ int main(int argc, const char* argv[]) {
 		summary |= stat.is_finished();
 	}
 
-	strong_player black("name=black " + black_args + " role=black");
+	player black("name=black " + black_args + " role=black");
 	player white("name=white " + white_args + " role=white");
 
 	if (!shell) { // launch standard local games
