@@ -26,8 +26,10 @@ class node : board {
 		/**
 		 * run MCTS for N cycles and retrieve the best action
 		 */
-		action run_mcts(size_t N, std::default_random_engine& engine) {
-			
+		action run_mcts(size_t flag, int count, size_t N, std::default_random_engine& engine) {
+			if (flag == 1){
+				N = (48-count)*N/31;
+			}
 			for(size_t i = 0; i < N; i++){
 				std::vector<node*> path = select();
 				node* leaf = path.back()->expand(engine);
@@ -237,9 +239,11 @@ protected:
  * random player for both side
  * put a legal piece randomly
  */
+
+
 class player : public random_agent {
 public:
-	player(const std::string& args = "") : random_agent("name=random role=unknown " + args),
+	strong_player(const std::string& args = "") : random_agent("name=random role=unknown " + args),
 		space(board::size_x * board::size_y), who(board::empty) {
 		if (name().find_first_of("[]():; ") != std::string::npos)
 			throw std::invalid_argument("invalid name: " + name());
@@ -254,10 +258,11 @@ public:
 	virtual action take_action(const board& state) {
 		size_t N = 7000;
 		N = meta["N"];
+		size_t flag = 1;
 		count+=1;
 		std::cout<<"count:"<<count<<"\n";
 		clock_t a=clock(); 
-		action result = node(state).run_mcts(N, engine);
+		action result = node(state).run_mcts(flag, count, N, engine);
 		clock_t b=clock();
 		total_time += double(b-a)/CLOCKS_PER_SEC;
 		std::cout<<double(b-a)/CLOCKS_PER_SEC<<" "<<total_time<<std::endl;
@@ -270,7 +275,6 @@ private:
 	int count = 0;
 	double total_time = 0;
 };
-
 
 class noob_player : public random_agent {
 public:
