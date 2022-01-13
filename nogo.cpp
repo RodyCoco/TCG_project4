@@ -63,8 +63,8 @@ int main(int argc, const char* argv[]) {
 		summary |= stat.is_finished();
 	}
 
-	player black("name=black " + black_args + " role=black");
-	player white("name=white " + white_args + " role=white");
+	player black("name=black " + black_args + "N=7000 role=black");
+	player white("name=white " + white_args + "N=7000 role=white");
 
 	if (!shell) { // launch standard local games
 		while (!stat.is_finished()) {

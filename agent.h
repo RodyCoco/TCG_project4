@@ -266,6 +266,9 @@ public:
 		clock_t b=clock();
 		total_time += double(b-a)/CLOCKS_PER_SEC;
 		std::cout<<double(b-a)/CLOCKS_PER_SEC<<" "<<total_time<<std::endl;
+		board copy = state;
+		if (result.apply(copy) != board::legal)
+				count = 0;
 		return result;
 	}
 
