@@ -7,7 +7,7 @@
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Thu Jan 13 16:08:43 2022
+# Make data base, printed on Fri Jan 14 01:32:57 2022
 
 # Variables
 
@@ -34,12 +34,11 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-d1bc0f41-c26b-4d3e-bb93-9ca76475200a-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-31dd9bbe-5635-4c78-ac0b-8ddcb56adb4f-sock
 # environment
 VSCODE_CWD = C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code
 # environment
-PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\MinGW\bin;;C:\Program Files\Git LFS;C: 
-\Program Files\WireGuard\;C:\Users\Rody\AppData\Local\Microsoft\WindowsApps;;C:\Users\Rody\.dotnet\tools;C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code\bin
+PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\MinGW\bin;;C:\Program Files\Git LFS;C:\Program Files\WireGuard\;C:\Users\Rody\AppData\Local\Microsoft\WindowsApps;;C:\Users\Rody\.dotnet\tools;C:\Users\Rody\AppData\Local\Programs\Microsoft VS Code\bin
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
@@ -59,7 +58,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14968_QTTCQOCHUOUZXXXP
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15368_NXMOYILTZNLLVVNW
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -145,7 +144,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 14968
+VSCODE_PID = 15368
 # environment
 USERDOMAIN_ROAMINGPROFILE = MSI
 # variable set hash-table stats:
@@ -181,13 +180,14 @@ all:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 3 / storage = 98 B / avg = 32 B
+# strcache buffers: 1 (0) / strings = 3 / st 
+orage = 98 B / avg = 32 B
 # current buf: size = 8174 B / used = 98 B / count = 3 / avg = 32 B
 
 # strcache performance: lookups = 4 / hit rate = 25%
 # hash-table stats:
 # Load=3/8192=0%, Rehash=0, Collisions=0/4=0%
-# Finished Make data base on Thu Jan 13 16:08:43 2022
+# Finished Make data base on Fri Jan 14 01:32:57 2022
 
  
 make: *** /Users/Rody/Desktop/project1/pj-1-code-v1: No such file or directory.  Stop.

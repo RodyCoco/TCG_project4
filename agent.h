@@ -259,6 +259,13 @@ public:
 		size_t N = 7000;
 		N = meta["N"];
 		size_t flag = 1;
+		bool flag2 = false;
+		for(int i=0;i<9;i++){
+			for(int j=0;j<9;j++){
+				if (state[i][j] != board::piece_type::empty) flag2 = true;
+			}
+		}
+		if (flag2==true) count = 0;
 		count+=1;
 		std::cout<<"count:"<<count<<"\n";
 		clock_t a=clock(); 
@@ -267,8 +274,6 @@ public:
 		total_time += double(b-a)/CLOCKS_PER_SEC;
 		std::cout<<double(b-a)/CLOCKS_PER_SEC<<" "<<total_time<<std::endl;
 		board copy = state;
-		if (result.apply(copy) != board::legal)
-				count = 0;
 		return result;
 	}
 
