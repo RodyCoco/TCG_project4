@@ -273,7 +273,6 @@ public:
 		clock_t b=clock();
 		total_time += double(b-a)/CLOCKS_PER_SEC;
 		std::cout<<double(b-a)/CLOCKS_PER_SEC<<" "<<total_time<<std::endl;
-		board copy = state;
 		return result;
 	}
 
