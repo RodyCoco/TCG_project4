@@ -265,7 +265,7 @@ public:
 				if (state[i][j] != board::piece_type::empty) flag2 = true;
 			}
 		}
-		if (flag2==true) count = 0;
+		if (flag2==false) count = 0;
 		count+=1;
 		std::cout<<"count:"<<count<<"\n";
 		clock_t a=clock(); 
