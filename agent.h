@@ -262,7 +262,7 @@ public:
 		bool flag2 = false;
 		for(int i=0;i<9;i++){
 			for(int j=0;j<9;j++){
-				if (state[i][j] != board::piece_type::empty) flag2 = true;
+				if (state[i][j] == board::piece_type::black || state[i][j] == board::piece_type::white) flag2 = true;
 			}
 		}
 		if (flag2==false) count = 0;
