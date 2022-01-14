@@ -259,13 +259,13 @@ public:
 		size_t N = 7000;
 		N = meta["N"];
 		size_t flag = 1;
-		bool flag2 = false;
+		int cnt = 0;
 		for(int i=0;i<9;i++){
 			for(int j=0;j<9;j++){
-				if (state[i][j] == board::piece_type::black || state[i][j] == board::piece_type::white) flag2 = true;
+				if (state[i][j] == board::piece_type::black || state[i][j] == board::piece_type::white) cnt++;
 			}
 		}
-		if (flag2==false) count = 0;
+		if (cnt ==1 || cnt == 0) count = 0;
 		count+=1;
 		std::cout<<"count:"<<count<<"\n";
 		clock_t a=clock(); 
